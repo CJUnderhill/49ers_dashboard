@@ -1,0 +1,23 @@
+[
+    { "id": 1, "date": "2023-09-10", "week": 1, "location": "Acrisure Stadium", "home": false, "opponent": "Pittsburgh Steelers", "score": 30, "opponent_score": 7 },
+    { "id": 2, "date": "2023-09-17", "week": 2, "location": "SoFi Stadium", "home": false, "opponent": "Los Angeles Rams", "score": 30, "opponent_score": 23 },
+    { "id": 3, "date": "2023-09-21", "week": 3, "location": "Levi's Stadium", "home": true, "opponent": "New York Giants", "score": 30, "opponent_score": 12 },
+    { "id": 4, "date": "2023-10-01", "week": 4, "location": "Levi's Stadium", "home": true, "opponent": "Arizona Cardinals", "score": 35, "opponent_score": 16 },
+    { "id": 5, "date": "2023-10-08", "week": 5, "location": "Levi's Stadium", "home": true, "opponent": "Dallas Cowboys", "score": 42, "opponent_score": 10 },
+    { "id": 6, "date": "2023-10-15", "week": 6, "location": "FirstEnergy Stadium", "home": false, "opponent": "Cleveland Browns", "score": 17, "opponent_score": 19 },
+    { "id": 7, "date": "2023-10-23", "week": 7, "location": "US Bank Stadium", "home": false, "opponent": "Minnesota Vikings", "score": 17, "opponent_score": 22 },
+    { "id": 8, "date": "2023-10-29", "week": 8, "location": "Levi's Stadium", "home": true, "opponent": "Cincinnati Bengals", "score": 17, "opponent_score": 31 },
+    { "id": 9, "date": "2023-11-05", "week": 9, "location": "EverBank Stadium", "home": false, "opponent": "Jacksonville Jaguars", "score": 34, "opponent_score": 3 },
+    { "id": 10, "date": "2023-11-12", "week": 10, "location": "Levi's Stadium", "home": true, "opponent": "Tampa Bay Buccaneers", "score": 27, "opponent_score": 14 },
+    { "id": 11, "date": "2023-11-19", "week": 11, "location": "Lumen Field", "home": false, "opponent": "Seattle Seahawks", "score": 31, "opponent_score": 13 },
+    { "id": 12, "date": "2023-11-26", "week": 12, "location": "Lincoln Financial Field", "home": false, "opponent": "Philadelphia Eagles", "score": 42, "opponent_score": 19 },
+    { "id": 13, "date": "2023-12-03", "week": 13, "location": "Levi's Stadium", "home": true, "opponent": "Seattle Seahawks", "score": 28, "opponent_score": 16 },
+    { "id": 14, "date": "2023-12-10", "week": 14, "location": "State Farm Stadium", "home": false, "opponent": "Arizona Cardinals", "score": 35, "opponent_score": 16 },
+    { "id": 15, "date": "2023-12-17", "week": 15, "location": "Levi's Stadium", "home": true, "opponent": "Baltimore Ravens", "score": 21, "opponent_score": 17 },
+    { "id": 16, "date": "2023-12-24", "week": 16, "location": "FedExField", "home": false, "opponent": "Washington Commanders", "score": 27, "opponent_score": 17 },
+    { "id": 17, "date": "2023-12-31", "week": 17, "location": "Levi's Stadium", "home": true, "opponent": "Los Angeles Rams", "score": 30, "opponent_score": 20 },
+    { "id": 18, "date": "2024-01-07", "week": 18, "location": "Levi's Stadium", "home": true, "opponent": "Green Bay Packers", "score": 31, "opponent_score": 10 },
+    { "id": 19, "date": "2024-01-20", "week": 19, "location": "Levi's Stadium", "home": true, "opponent": "Green Bay Packers", "score": 24, "opponent_score": 21 },
+    { "id": 20, "date": "2024-01-28", "week": 20, "location": "Levi's Stadium", "home": true, "opponent": "Detroit Lions", "score": 34, "opponent_score": 31 },
+    { "id": 21, "date": "2024-02-11", "week": 21, "location": "State Farm Stadium", "home": false, "opponent": "Kansas City Chiefs", "score": 22, "opponent_score": 25 }
+]

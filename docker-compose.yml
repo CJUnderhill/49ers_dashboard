@@ -1,0 +1,88 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: dashboard_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./config/db/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 5s
+      retries: 10
+    networks:
+      - web
+
+  redis:
+    image: redis:alpine
+    container_name: redis-server
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server --save 20 1 --loglevel warning --timeout 0
+    volumes: 
+      - cache:/data
+    networks:
+      - web
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: php_server
+    expose:
+      - "80" # exposed internally, forwarded to HTTPS by reverse proxy
+    environment:
+      DB_HOST: db
+      DB_DATABASE: dashboard_db
+      DB_USER: user
+      DB_PASSWORD: password
+    depends_on:
+      db:
+        condition: service_healthy
+        restart: true
+      redis:
+        condition: service_started
+    networks:
+      - web
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: nextjs_react
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - web
+    
+  caddy:
+    image: caddy:latest
+    container_name: caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./config/Caddyfile:/etc/caddy/Caddyfile  # Mount the Caddyfile to configure Caddy
+      - ./www:/var/www  # Mount the directory for your PHP files
+      - ./config/certs:/etc/caddy/certificates
+    networks:
+      - web
+    depends_on:
+      - backend
+
+networks:
+  web:
+    driver: bridge
+
+volumes:
+  db_data:
+  cache:
