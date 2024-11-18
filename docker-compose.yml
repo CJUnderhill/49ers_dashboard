@@ -72,7 +72,6 @@ services:
       - "443:443"
     volumes:
       - ./config/Caddyfile:/etc/caddy/Caddyfile  # Mount the Caddyfile to configure Caddy
-      - ./www:/var/www  # Mount the directory for your PHP files
       - ./config/certs:/etc/caddy/certificates
     networks:
       - web

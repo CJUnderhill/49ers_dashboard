@@ -1,0 +1,9 @@
+localhost {
+    root * /var/www  # Serve files from the mounted directory
+    file_server      # Serve static files
+
+    # Reverse proxy PHP requests to the backend (PHP server)
+    reverse_proxy backend:80  # Assuming the PHP server is on port 80 in the backend container
+
+    tls /etc/caddy/certificates/cert.crt /etc/caddy/certificates/cert.key
+}

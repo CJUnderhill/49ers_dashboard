@@ -38,12 +38,12 @@ This will stop all Docker containers, remove any associated storage volumes, reb
 ### Security Configuration
 I’ve included security certificates to ensure HTTPS-based communication between the frontend and backend. However, I cannot register these as trusted certificates since we don’t own a domain for this dashboard. This requires some minor local configurations to interact with the system. Any direct backend interactions will require disabling SSL verification; software like Postman will notify you and guide you through the process. Viewing the frontend will require minor browser configuration to allow insecure certificates. Instructions are as follows, and the steps may be reversed once you're done viewing the site.
 
-_Ignore Certificate Errors in Development (for Browsers):_
+**Ignore Certificate Errors in Development (for Browsers)**:
 
-**Google Chrome**:  
+_Google Chrome_:  
 Navigate to `chrome://flags/#allow-insecure-localhost` and enable the setting.
 
-**Mozilla Firefox**:  
+_Mozilla Firefox_:  
 In Firefox, you can manually accept the risk for self-signed certificates. When the certificate error occurs, there should be an option to "proceed anyway" after adding an exception.
 
 ## Backend

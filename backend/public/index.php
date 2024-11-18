@@ -7,7 +7,6 @@ require "../controllers/AuthController.php";
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
-// TODO HTTPS only!
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: OPTIONS,GET,POST,PUT,DELETE");
